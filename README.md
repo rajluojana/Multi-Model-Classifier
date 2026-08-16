@@ -20,7 +20,7 @@ during training, so results are directly comparable across models.
   mass — e.g. radius, texture, perimeter, area, smoothness, compactness, concavity,
   concave points, symmetry, fractal dimension).
 - **Target:** Binary — malignant (0) vs. benign (1).
-- **Meets FR-1:** 30 features ≥ 12 required; 569 rows ≥ 500 required.
+- **Meets Problem Requirement:** 30 features ≥ 12 required; 569 rows ≥ 500 required.
 
 ## c. GitHub Repository Link
 
