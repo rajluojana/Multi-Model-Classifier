@@ -24,7 +24,7 @@ during training, so results are directly comparable across models.
 
 ## c. GitHub Repository Link
 
-`<add your repository URL here after pushing to GitHub>`
+`[ps://github.com/rajluojana/Multi-Model-Classifier/](https://github.com/rajluojana/Multi-Model-Classifier/)`
 
 ## d. Comparison Table
 
@@ -42,7 +42,7 @@ split and `StandardScaler` preprocessing used for all 5 models.
 | ML Model Name | Observation about model performance |
 |---------------|--------------------------------------|
 | Logistic Regression | Best performer across every metric on this dataset — accuracy, AUC, and MCC all highest. The 30 features (radius, texture, area, etc.) separate the two classes in a way that's close to linearly separable after scaling, which plays directly to logistic regression's strength. |
-| Decision Tree | Weakest performer here. A single tree with `max_depth=6` sacrifices some accuracy to control overfitting; training accuracy is noticeably higher than test accuracy, consistent with the overfitting tendency noted in `MODELS_SOURCE_OF_TRUTH.md`. |
+| Decision Tree | Weakest performer here. A single tree with max_depth=6 sacrifices some accuracy to control overfitting; training accuracy is noticeably higher than test accuracy, a classic sign of a decision tree overfitting to the training data. |
 | kNN | Solid, mid-pack performance once features were scaled — confirms scaling was necessary and effective (an unscaled kNN would perform far worse on features with very different ranges, e.g. area vs. smoothness). |
 | Naive Bayes | Reasonable AUC (0.9868) but lower accuracy/F1 than the top models — the independence assumption between features is somewhat violated here since many of the 30 features are derived from the same underlying measurements (e.g. radius and area are correlated). |
 | Random Forest (Ensemble) | Strong and stable — matches kNN on accuracy/F1 and has the second-highest AUC, improving over the single Decision Tree as expected, though it doesn't surpass Logistic Regression on this particular dataset. |
